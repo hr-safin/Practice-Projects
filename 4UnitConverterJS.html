@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit ConverTer</title>
+    <style>
+        
+        
+        .h1{
+            text-align: center;
+            color: black;
+        }
+        .nav{
+           
+           
+            
+            
+            
+            display: flex;
+            justify-content: center;
+
+        }
+        input[type="text"]{
+            
+            padding: 10px;
+            border: 2px solid black;
+            font-size: 15px;
+            
+        }
+        .equal{
+            padding-top: 4px;
+            padding-left: 10px;
+            font-size: 26px;
+            color: black ;
+        }
+        .lb{
+            padding-top: 8px;
+            padding-right: 6px;
+        }
+        .lb1{
+            padding-top:8px ;
+            padding-right: 6px;
+            padding-left: 7px;
+        }
+        .h2{
+            text-align: center;
+            padding-top: 20px;
+            text-decoration: underline;
+        }
+        .nav1{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">Unit Converter</h1>
+    <nav class="nav">
+        
+        <label class="lb">Feet</label><br><br>
+        <input type="text" class="tx" value="1" id="txt"><br>
+        <div class="equal">=</div>
+        
+            <label class="lb1">Inch</label><br>
+        <input type="text" class="tx1" value="12" id="txt1">
+        
+        
+    </nav>
+    <h2 class="h2">Meter To kilometer</h2>
+    <div class="nav1">
+     <label class="lb">Meter</label><br><br>
+     <input type="text" id="tx2" class="tx" value="1000">
+     <div class="equal">=
+     </div>
+     <label class="lb1">kilometer</label><br>
+     <input type="text" class="tx1" id="tx3" value="1">
+    </div>
+    <script>
+        var feet=document.getElementById("txt");
+        var inch=document.getElementById("txt1");
+
+        var meter=document.getElementById("tx2");
+        var kilometer=document.getElementById("tx3");
+
+        feet.addEventListener("input", function(){
+            let f=this.value;
+
+            let i=f*12;
+            inch.value=i;
+           
+        });
+        inch.addEventListener("input", function(){
+            let i=this.value;
+
+            let f=i/12;
+            
+            if(!Number.isInteger(f)){
+                f=f.toFixed(2);
+            }
+            feet.value=f;
+        });
+
+        meter.addEventListener("input", function(){
+            let m=this.value;
+
+            let n=m/1000;
+
+            kilometer.value=n;
+        });
+
+        kilometer.addEventListener("input", function(){
+            let n=this.value;
+
+            let m=n*1000;
+
+            meter.value=m;
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+    <style>
+        .sec{
+            display: flex;
+            justify-content: center;
+             height: 100vh;
+             
+            
+        }
+        .toDo{
+            border: 2px solid black;
+            height: 600px;
+            width: 800px;
+            background-color: cadetblue;
+            
+        }
+        .h1{
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        .s{
+            padding-left: 110px;
+        }
+        input[type="text"]{
+        width: 65%;
+        padding: 18px;
+        font-size: 17px;
+        color: black;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid black;
+        }
+        .btn{
+            width: 15%;
+            padding: 18px;
+            font-size: 17px;
+            color: white;
+            border-radius: 10px;
+            background-color: chocolate;
+            cursor: pointer;
+        }
+        .p-styling{
+            cursor: pointer;
+            padding-left:120px;
+            font-size: 20px;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <section class="sec">
+        <div class="toDo">
+            <h1 class="h1">To Do List</h1>
+            <span class="s">
+                <input type="text" id="txt" placeholder="add something">
+                <button type="button" class="btn" id="btn">Add</button>
+            </span>
+            <div id="container"></div>
+            
+        </div>
+    </section>
+    <script>
+        let button=document.getElementById("btn");
+        let container=document.getElementById("container");
+        let int=document.getElementById("txt");
+
+        button.addEventListener("click", function(event){
+            let paragraph=document.createElement("p");
+
+            container.classList.add("p-styling");
+
+            paragraph.innerText=int .value;
+            container.appendChild(paragraph);
+            int.value="";
+
+         paragraph.addEventListener("click", function(event){
+            paragraph.style.textDecoration="line-through";
+         });
+
+         paragraph.addEventListener("dblclick", function(event){
+            container.removeChild(paragraph);
+         })
+        })
+    </script>
+    
+</body>
+</html>

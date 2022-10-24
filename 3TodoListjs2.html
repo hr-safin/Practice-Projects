@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST 2</title>
+    <style>
+        .nav{
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+            
+        }
+           
+        
+        .h1{
+            padding-left: 40px;
+            color: crimson;
+        }
+        input[type="text"]{
+            padding: 10px 50px;
+            margin-left: 0;
+            border: 2px solid black;
+        }
+        .btn{
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: chocolate;
+            color: white;
+            border: 2px solid chocolate;
+        }
+        .pp{
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <section class="nav">
+        <div class="todo">
+            <h1 class="h1">TO DO LIST</h1>
+            <input type="text" class="txt" id="text">
+            <button type="button" class="btn" id="btn">Add To Cart</button>
+        </div>
+    </section>
+    <div id="container"></div>
+    <script>
+        const input=document.getElementById("text");
+        const button=document.getElementById("btn");
+        const container=document.getElementById("container")
+
+        button.addEventListener("click", function(event){
+            let p=document.createElement("p");
+
+            container.classList.add("pp");
+
+            p.innerText=input.value;
+
+            container.appendChild(p);
+            input.value="";
+
+        })
+    </script>
+</body>
+</html>

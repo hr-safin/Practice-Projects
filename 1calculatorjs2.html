@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .calculator{
+            width: 400px;
+            height: 550px;
+            background-color: black;
+            padding-left: 38px;
+            padding-top: 20px;
+            border-radius: 20px;
+
+        }
+        input[type="text"]{
+            width: 90%;
+            padding: 30px;
+            font-weight: bolder;
+            font-size: 26px;
+            border-radius: 10px;
+            text-align: right;
+            background-color: cadetblue;
+            
+        }
+        .buttons{
+            padding-left: 7px;
+        }
+        .btn{
+            width: 21%;
+            padding: 22px;
+            font-size: 17px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn2-mod{
+            width: 21%;
+            padding: 22px;
+            font-size: 17px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: chocolate;
+            color: white;
+        }
+        .btn-clear{
+            width: 43%;
+            margin-top: 10px;
+            padding: 22px;
+            font-size: 17px;
+            background-color: brown;
+            color: white;
+            border-radius: 5px;
+            margin-right: 1px;
+            cursor: pointer;
+        }
+        .btn-equal{
+            width: 43%;
+            margin-top: 10px;
+            padding: 22px;
+            font-size: 17px;
+            background-color: chocolate;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn2{
+            background-color: chocolate;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="calculator">
+        <form class="form">
+            <input type="text" class="display">
+        </form>
+        <div class="buttons">
+            <button type="button" class="btn" data-num="9">9</button>
+            <button type="button" class="btn" data-num="8">8</button>
+            <button type="button" class="btn" data-num="7">7</button>
+            <button type="button" class="btn btn2" data-num="/">/</button><br>
+            <button type="button" class="btn" data-num="6">6</button>
+            <button type="button" class="btn" data-num="5">5</button>
+            <button type="button" class="btn" data-num="4">4</button>
+            <button type="button" class="btn btn2" data-num="*">*</button><br>
+            <button type="button" class="btn" data-num="3">3</button>
+            <button type="button" class="btn" data-num="2">2</button>
+            <button type="button" class="btn" data-num="1">1</button>
+            <button type="button" class="btn btn2" data-num="+">+</button><br>
+            <button type="button" class="btn " data-num="-">-</button>
+            <button type="button" class="btn" data-num=".">.</button>
+            <button type="button" class="btn" data-num="0">0</button>
+            <button type="button" class=" btn2-mod" data-num="%">%</button><br>
+            <button type="button" class="btn-clear" data-num="clear">C</button>
+            <button type="button" class="btn-equal" data-num="=">=</button>
+        </div>
+    </section>
+    <script>
+        (function (){
+            let display=document.querySelector(".display")
+            let buttons=document.querySelectorAll(".btn")
+            let mod=document.querySelector(".btn2-mod")
+            let clear=document.querySelector(".btn-clear")
+            let equal=document.querySelector(".btn-equal");
+          
+
+            buttons.forEach(function(button){
+                button.addEventListener("click", function(event){
+                    let value=event.target.dataset.num;
+                    display.value +=value;
+                })
+            })
+            mod.addEventListener("click", function(event){
+                display.value==answer
+            })
+
+            equal.addEventListener("click", function(event){
+
+                if(display.value===""){
+                    display.value="Please Enter";
+                }
+
+                else{
+                    let answer=eval(display.value);
+                    display.value=answer
+                }
+            });
+            clear.addEventListener("click", function(event){
+                display.value="";
+            })
+            
+        })();
+    </script>
+    
+</body>
+</html>
