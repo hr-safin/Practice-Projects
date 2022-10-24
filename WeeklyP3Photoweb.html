@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Website</title>
+    <script src="https://kit.fontawesome.com/112e65b282.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(./img/photograp4.jpeg);
+            background-size: cover;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           align-items: center;
+           padding: 1rem;
+           font-weight: bolder;
+        }
+        .title a{
+            color:whitesmoke;
+            font-size: 35px;
+        }
+        .body a{
+            text-decoration: none;
+            padding: 20px 20px;
+            margin: 10px 20px;
+            color: whitesmoke;
+        }
+        .footer{
+            padding: 5px;
+        }
+        .footer input{
+            color: whitesmoke;
+            padding: 10px 20px;
+            border: 2px solid whitesmoke;
+            border-radius: 3px;
+            background-color: #0F0E0E;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .btn{
+            background-color: #0F0E0E ;
+            color: whitesmoke;
+            padding: 9px 20px;
+            border: 2px solid whitesmoke;
+            font-size: 18px ;
+            border-radius: 3px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .btn1{
+            background-color: #0F0E0E ;
+            color: whitesmoke;
+            padding: 10px 15px;
+            border: 1px solid whitesmoke;
+            font-size: 18px ;
+            border-radius: 3px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            cursor: pointer;
+            margin:  20px;
+        }
+        .para{
+            color: whitesmoke;
+            padding: 20px 40px;
+            margin: 80px;
+            font-family: 'Times New Roman', Times, serif;
+          
+        }
+        .p{
+            font-size: 50px;
+            padding: 10px;
+        }
+        .p1{
+            font-size: 18px;
+            padding: 20px;
+        }
+         .btn1:hover{
+            background-color: orangered;
+            
+        }
+        .btn:hover{
+            background-color: orangered;  
+        }
+        .title a:hover{
+            color: orangered;
+            transform: scale(1.8);
+            transition: all 1sec ease;
+        }
+        .body a:hover{
+            color: orangered;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="navbar">
+            <div class="title">
+                <a href="#"><i class="fa-solid fa-camera"></i></a>
+            </div>
+            <div class="body">
+                <a href="#">HOME</a>
+                <a href="#">SERVICES</a>
+                <a href="#">ABOUT</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer">
+                <input type="search" class="src" placeholder="type to search">
+                <button class="btn" type="button">LogIn</button>
+            </div>
+        </div>
+    </section>
+    <div class="para">
+        <p class="p">WELCOME  <strong class="st">TO</strong>  CREATIVE<br>PHOTOGRAPHY</p>
+        <p class="p1">We create magic to make your<br>imagination true</p>
+        <button type="button" class="btn1">Booking Now</button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RW FULL WEBSITE</title>
+    <script src="https://kit.fontawesome.com/112e65b282.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            text-decoration: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav{
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(./img/ed2.jpg) ;
+            background-size: cover;
+            background-position: center;
+        }
+        .logo{
+            color: white;
+            
+            font-weight: bolder;
+            line-height: 70px;
+            padding: 0 100px;
+            cursor: pointer;
+            font-size: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        
+        nav ul{
+            float: right;
+            margin-right: 20px
+        }
+
+        nav ul li{
+            display: inline-block;
+            margin: 0 50px;
+        }
+        nav ul li a{
+            color: white;
+            font-size: 18px;
+            line-height: 80px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            position: relative;
+        }
+
+        nav ul li a::after{
+            content: " ";
+            left: 0;
+            width: 0;
+            background-color: aqua;
+            position: absolute;
+            bottom: -6px;
+            transition: all 0.5s;
+            height: 3px;
+        }
+        nav ul li a:hover:after{
+            width: 100%;
+            color: beige;
+        }
+        .checkbtn{
+            font-size: 24px;
+            color: white;
+            float: right;
+            line-height: 85px;
+            padding-right: 20px;
+            cursor: pointer;
+            display: none;
+
+        }
+        #check{
+            display: none;
+        }
+
+        
+        
+        .h3{
+            color: white;
+            font-size: 70px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            text-align: center;
+            padding-top: 230px;
+            
+        }
+        .h3:hover{
+            -webkit-text-stroke: 2px #fff;
+             color: transparent;
+             cursor: pointer;
+        }
+        .p3{
+            color: wheat;
+            font-size: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            padding-top: 24px;
+            font-weight: bold;
+            
+        }
+        .div{
+            text-align: center;
+        }
+        .btn{
+            color: white;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 12px 24px;
+            font-size: 17px;
+            /* font-weight: bold; */
+            border-radius: 20px;
+            border: 1px solid white;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3px);
+            /* margin-left: 600px; */
+            margin-top: 60px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover{
+            
+            transform: scale(1.07); 
+        }
+        .bg{
+            background-color: #F6FBF4;
+            padding-top: 15px;
+        }
+        .h4{
+            text-align: center;
+            font-size: 40px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            padding: 120px;
+            align-items: center;
+            background-color: #F6FBF4;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 80vh;
+            
+            
+            
+            
+            
+            
+            
+        }
+        .card1{
+            margin-right: 40px;
+            /* background-color: blanchedalmond; */
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            flex-wrap: wrap;
+            transition: all .7s;
+            background-color: antiquewhite;
+            
+        }
+        .card1:hover{
+            background-color: white;
+            transform: scale(1.07);
+        }
+        .card2{
+            margin-right: 40px;
+            /* background-color: blanchedalmond; */
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            flex-wrap: wrap;
+            transition: all .7s;
+            background-color: antiquewhite;
+           
+        }
+        .card2:hover{
+            background-color: white;
+            transform: scale(1.07);
+        }
+        .card3{
+            margin-right: 30px;
+            /* background-color: blanchedalmond; */
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            flex-wrap: wrap;
+            transition: all .7s;
+            background-color: antiquewhite;
+            
+            
+        }
+        .card3:hover{
+            background-color: white;
+            transform: scale(1.07);
+            
+        }
+        .h1{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 20px;
+            font-size: 30px;
+        }
+        .p1{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+        .bt{
+            text-align: center;
+            
+        }
+        .bt1{
+            
+            padding: 10px 14px;
+            /* margin-left: 140px; */
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+        .bt1:hover{
+            background-color: white;
+            color: black;
+            
+        }
+        .src{
+            width: 400px;
+            height: 300px;
+            border-radius: 14px;
+            transition: all .7s;
+            cursor: pointer;
+            
+        }
+        .src:hover{
+          transform: scale(1.07);
+        }
+        .facili{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 80vh;
+            flex-wrap: wrap;
+            
+            
+            
+            
+        }
+        .f1{
+            padding-right: 60px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .f2{
+            padding-right: 60px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .f3{
+            padding-right: 60px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .h6{
+            
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        .h2{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .p2{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-bottom: 12px;
+
+        }
+        .h7{
+            
+            text-decoration: underline;
+            font-size: 35px;
+        }
+        .p4{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #F6FBF4;
+            text-align: center;
+            padding-top:230px;
+            padding-right: 20px;
+            font-size: 60px;
+        }
+        .about{
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(./img/About.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            border-radius: 800px;
+            border: 1px solid burlywood;
+        }
+        .btn3{
+            text-align: center;
+           
+            padding-right: 40px;
+            padding-top: 60px;
+        }
+        .btn2{
+            padding: 12px 22px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3px);
+            color: white;
+            border-radius: 10px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all .5s;
+
+        }
+        .btn2:hover{
+            transform: scale(1.07);
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(2px);
+
+        }
+        /* contact */
+        .contact{
+            display: flex;
+            justify-content: space-around;
+           width: 100%;
+           height: 80vh;
+            align-items: center;
+            background-color: #F6FBF4;
+        }
+        .h5{
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            padding-right: 70px;
+            padding-bottom: 25px;
+        }
+
+        .first a{
+            font-size: 45px;
+            padding-right: 50px;
+            transform: all .3;
+            
+
+
+        }
+        .first a:hover{
+            transform: scale(1.8);
+        }
+        .fc{
+            color: #2D46B9;
+        }
+        .tele{
+            color: #00C1D4;
+        }
+        .ins{
+            color: orangered;
+        }
+        .tw{
+            color: #3AB0FF
+        }
+        
+
+        
+        .second{
+            padding-right: 70px;
+            border: 2px solid black;
+            background-color:#F6FBF4;
+            padding-bottom: 60px;
+            padding-left: 70px;
+            padding-top: 40px;
+            border-radius: 25px;
+            
+        }
+        .text{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+            font-size: 19px;
+            
+            
+        }
+        .text1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+            font-size: 19px;
+            
+        }
+        .text2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+            font-size: 19px;
+            
+        }
+        .int{
+            padding: 7px 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+        .int1{
+            padding: 7px 30px; 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+        .int2{
+            padding: 50px 30px; 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+        .btn22{
+            padding: 8px 89px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            /* font-weight: bold; */
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+        .btn22:hover{
+            background-color: #3AB0FF;
+            color: white;
+            border: 1px solid #3AB0FF;
+        }
+        /* foot */
+        .foot{
+            background-color: #07031A;
+            color: white;
+            padding: 28px;
+        }
+        .p8{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .st{
+            color:#00C1D4;
+        }
+        
+
+        
+        @media (max-width: 850px){
+         
+         .logo{
+             font-size: 26px;
+             padding-left: 55px;
+         }
+         nav ul li a{
+             font-size: 20px;
+             
+         }
+        .checkbtn{
+         display: block;
+        }
+ 
+         ul{
+             position: absolute;
+             text-align: center;
+             left: -110%;
+             width: 100%;
+             top: 80px;
+             height: 100vh;
+             background-color: rgba(0, 0, 0, 0.1);
+             backdrop-filter: blur(7px);
+             transition: all .5s;
+         }
+         nav ul li{
+             display: block;
+         }
+ 
+         #check:checked ~ ul{
+             left: 0;
+         }
+         .p3{
+             font-size: 18px;
+         }
+         .h3{
+            font-size: 45px;
+         }
+         .card{
+            flex-direction: column;
+            
+            
+            
+         }
+         
+         .bt{
+          
+            text-align: start;
+            padding-left: 50px;
+         }
+         .bt1{
+            text-align: center;
+            
+            
+         }
+         
+         }
+         
+ 
+ 
+         
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <label class="logo">E-LEARNING</i></label>
+        
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">COURSE</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        
+            <h3 class="h3">State University</h3>
+
+        <p class="p3">Lorem ipsum dolor Cum inventore ab perferendis exercitationem. Aliquid quis voluptas qui.<br> Ullam doloribus quis omnis tempore.Incidunta dolorem <br>veniam fuga nobis eveniet,<br></p>
+        <div class="div">
+            <button type="button" class="btn">More Details</button>
+        </div>
+
+        
+        
+        
+        
+    </nav>
+    <div class="bg">
+        <h4 class="h4" style="text-decoration: underline;">COURSES<br></h4>
+    </div>
+    
+    <section class="card">
+       
+        <div class="card1">
+            <h1 class="h1">INTERMEDIATE</h1>
+            <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id, velit corporis fugit itaque minima, hic tempora omnis deleniti culpa, porro sint error doloribus vero earum unde consequatur dolore. Esse aspernatur accusamus ipsam molestiae tenetur beatae voluptates ratione, delectus nesciunt in aperiam adipisci, maxime a quibusdam unde atque voluptatum. Nostrum?</p>
+            <div class="bt">
+                <button type="button" class="bt1">Apply Now</button>
+            </div>
+        </div>
+        <div class="card2">
+            <h1 class="h1">UNDERGRADUATE</h1>
+            <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id, velit corporis fugit itaque minima, hic tempora omnis deleniti culpa, porro sint error doloribus vero earum unde consequatur dolore. Esse aspernatur accusamus ipsam molestiae tenetur beatae voluptates ratione, delectus nesciunt in aperiam adipisci, maxime a quibusdam unde atque voluptatum. Nostrum?</p>
+            <div class="bt">
+                <button type="button" class="bt1">Apply Now</button>
+            </div>
+        </div>
+        <div class="card3">
+            <h1 class="h1">POSTGRADUATE</h1>
+            <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id, velit corporis fugit itaque minima, hic tempora omnis deleniti culpa, porro sint error doloribus vero earum unde consequatur dolore. Esse aspernatur accusamus ipsam molestiae tenetur beatae voluptates ratione, delectus nesciunt in aperiam adipisci, maxime a quibusdam unde atque voluptatum. Nostrum?</p>
+            <div class="bt">
+                <button type="button" class="bt1">Apply Now</button>
+            </div>
+            
+
+        </div>
+    </section>
+    <h6 class="h6" style="text-decoration: underline ;">OUR FACILITIES</h6>
+
+    <section class="facili">
+        <div class="f1">
+            <h2 class="h2">PLAYGROUND</h2>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Facere eveniet et sed itaque enim obcaecati aut quia eius </p>
+            <img class="src" src="./img/PL.jpeg">
+        </div>
+        <div class="f2">
+            <h2 class="h2">COMPUTER LAB</h2>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Facere eveniet et sed itaque enim obcaecati aut quia eius</p>
+            <img class="src" src="./img/CM1.jpeg">
+        </div>
+        <div class="f3">
+            <h2 class="h2">STUDY ROOM</h2>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Facere eveniet et sed itaque enim obcaecati aut quia eius</p>
+            <img class="src" src="./img/STUDY.jpeg">
+        </div>
+    </section>
+      <h6 class="h6 h7">ABOUT US</h6>
+    <section class="about">
+        <p class="p4">You can apply from anywhere.<br>if you want.we provide extra<br> facilities for foreign students</p>
+      <div class="btn3">
+        <button type="button" class="btn2">Apply Now</button>
+      </div>
+        
+    </section>
+    <div class="1" style=" text-decoration:underline; font-size:35px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color:#F6FBF4; font-weight:bold; text-align: center; padding-top: 30px; padding-bottom: 20px; ">
+        <p>CONTACT US</p></div>
+   
+    <section class="contact">
+        <div class="first">
+            <h4 class="h5">STATE UNIVERSITY</h4>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="tw" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="tele" href="#"><i class="fa-brands fa-telegram"></i></a>
+            <a class="ins" href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="second">
+            
+            <label class="text">EMAIL:</label><br>
+            <input type="text" placeholder="type your email" class="int"><br><br>
+            <label class="text1">PASSWORD:</label><br>
+            <input type="password" placeholder="type your password" class="int1"><br><br>
+
+            <label class="text2">FEEDBACK:</label><br>
+            <input type="text" placeholder="write messege" class="int2"><br><br>
+            <button type="button" class="btn22">Submit</button>
+
+
+        </div>
+        
+
+    </section>
+    <div class="foot">
+        <p class="p8">Created by<strong class="st"> HRS</strong> | <strong class="st1"> copywrite</strong> 2022 All Rights Reserved </p>
+    </div>
+    
+   
+       
+    
+        
+    
+    
+</body>
+</html>

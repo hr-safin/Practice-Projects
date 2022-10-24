@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="./img/netflix_logo_icon_170919.png">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./img/netflix.png) ;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .section{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0;
+            
+        }
+        .brand{
+            line-height: 4px;
+        }
+        .h1{
+            color: red;
+            font-size: 55px;
+            
+            padding-left: 50px;
+        }
+        .sec1{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding-top: 12px;
+            
+        }
+        .Form{
+            
+            padding-left: 62px;
+            padding-top: 20px;
+            color: white;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
+             backdrop-filter: blur(3px);
+            width: 400px;
+            height: 624px;
+            
+           
+
+        }
+        .h2{
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white;
+        }
+       
+        .txt{
+            padding: 14px 20px;
+            border-radius: 5px;
+            color: white;
+            width: 71%;
+            
+            background-color: #2C3333;
+            border: 2px solid #2C3333;
+            font-size: 17px;
+            border-top: none;
+        }
+        .password{
+            padding: 14px 20px;
+            border-radius: 5px;
+            color: white;
+            width: 71%;
+            border-top: none;
+            
+            background-color: #2C3333;
+            border: 2px solid #2C3333;
+            font-size: 17px;
+        }
+        .btn{
+            width: 82%;
+            padding: 14px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: red;
+            color: white;
+            border: 2px solid red;
+            font-size: 19px;
+            cursor: pointer;
+
+        }
+        .label{
+            font-size: 14px;
+            color: grey;
+
+
+        }
+        .need{
+            padding-left: 133px;
+            font-size: 14px;
+            color: grey;
+        }
+        .h3{
+            padding-top: 62px;
+            font-size: 14px;
+            color: grey;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .st{
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .st1{
+            color: #0078AA;
+        }
+        .st1:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        .p3{
+           
+            color: grey;
+            font-size: 14px;
+            padding-top: 6px;
+        }
+        .sec2{
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.6);
+             backdrop-filter: blur(3px);
+            
+             padding-bottom: 30px;
+             color: grey;
+             justify-content: space-evenly;
+        }
+        .h4{
+            padding-top: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .h4:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            color: azure;
+        }
+        .h5{
+            padding-top: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .h5:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            color: azure;
+        }
+        .h6:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: azure;
+        }
+        .h7{
+            padding-top: 60px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .h7:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            color: azure;
+        }
+        .h8:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: azure;
+        }
+
+        .h9{
+            padding-top: 60px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .h9:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            color: azure;
+        }
+        .h10{
+            padding-top: 60px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .h10:hover{
+            cursor: pointer;
+            text-decoration: underline;
+            color: azure;
+        }
+
+        /* media for responsive */
+
+        @media (max-width: 730px) {
+            body{
+                background-color: black;
+                background-image: none;
+            }
+
+            .h1{
+                padding-left: 15px;
+            }
+            .Form{
+                
+                justify-content: flex-start;
+                left: 0;
+                
+                width: 100%;
+                
+                
+            }
+            .txt{
+                width: 86%; 
+             text-align: start;
+             margin-right: 60px;
+            }
+            .password{
+                width: 86%; 
+             text-align: start;
+            }
+            .btn{
+                width: 92%; 
+            }
+            .h2{
+                padding-left: 0;
+            }
+            .label{
+                color: white;
+            }
+            .need{
+                /* padding-left: 381px; */
+                color: white;
+                text-align: end;
+            }
+
+        }
+            
+        
+         
+        
+
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="brand">
+            <h1 class="h1">NETFLIX</h3>
+        </div>
+    </section>
+
+    <section class="sec1">
+        <div class="Form">
+            <h2 class="h2">Sign In</h3>
+            <label><input type="text" class="txt" placeholder="Email or phone Number"></label><br><br>
+            <label><input type="password" class="password" placeholder="Password"></label><br><br><br>
+            <button type="button" class="btn">Sign In</button><br><br>
+            <label class="label"><input type="checkbox" class="check">Remember me</label>
+            <span class="need">Need Help?</span><br> 
+
+            <h3 class="h3">
+                New to Netflix?<strong class="st"> Sign up now</strong>
+            </h3>
+            <p class="p3">This page is protected by Google reCAPTCHA to<br> ensure you're not a bot.<strong class="st1"> Learn more.</strong> </p>
+        </div>
+    </section><br><br><br><br><br>
+    <section class="sec2">
+        <div class="left">
+            <p class="h4">Questions? Contact us.</p>
+            <p class="h5">FAQ</p>
+            <p class="h6">Cookie Preferences</p>
+        </div>
+        <div class="left1">
+            <p class="h7">Help Center</p>
+            <p class="h8">Corporate Information</p>
+
+        </div>
+        <div class="mid">
+            <p class="h9">Terms of Use</p>
+        </div>
+        <div class="right">
+            <p class="h10">Privacy</p>
+        </div>
+    </section>
+    
+</body>
+</html>

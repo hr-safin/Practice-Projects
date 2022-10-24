@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA WEBSITE</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(./img/pizza8.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            height: 100vh;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-evenly;
+            
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .body{
+            margin: 18px;
+            font-size: 20px;
+            
+        }
+        .body a{
+            text-decoration: none;
+            padding: 10px;
+            margin: 20px;
+            color: white;
+            
+        }
+        .body a:hover{
+            color: yellow;
+            text-decoration: underline;
+            
+        }
+        .footer{
+            margin: 15px;
+            
+        }
+        .int{
+            padding: 8px 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+            font-weight: bolder;
+            background-color: black;
+            border: 2px solid white;
+            
+            
+        }
+        .btn{
+            padding: 8px 17px;
+            cursor: pointer;
+           
+            color: black;
+          
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .flex1{
+            display: flex;
+            justify-content: center;
+        }
+        .body1{
+            color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            align-items: flex-end;
+            align-self: flex-end;
+            padding: 160px;
+            padding-left: 20px;
+
+        }
+        .h2{
+            font-size: 60px;
+        }
+        .h3{
+            font-size: 26px;
+            color: yellow;
+            padding-left: 150px;
+            margin: 18px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .p{
+            margin: 18px;
+            font-size: 16px; 
+            padding-left: 100px;
+            font-weight: bolder;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .btn1{
+            padding: 10px 18px;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 2px solid yellow;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-left: 200px;
+            margin-top: 30px;
+            color: yellow;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .img{
+            border-radius: 30px;
+            margin: 8px;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+        }
+        .img:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.3sec ease-out;
+        }
+       
+    </style>
+</head>
+<body>
+    <section>
+        <nav class="flex">
+            <div class="title">
+                <img class="img" src="./img/pizzalogo4.jpg" class="img" style="width: 60px; height: 60px; ">
+
+            </div>
+            <div class="body">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contact</a>
+                
+            </div>
+            <div class="footer">
+                <input class="int" type="search" placeholder="search your pizza">
+                <button type="button" class="btn">Search</button>
+            </div>
+           
+        </nav>
+    </section>
+    <footer>
+        <nav class="flex1">
+            <div class="body1">
+                <h2 class="h2">WE MADE FOR YOU</h2>
+
+                <h2 class="h3">HOT AND PREMIUM</h2>
+                <p class="p">Home delivery available from 9am till 10pm</p>
+                <button type="button" class="btn1">Check our menu</button>
+            
+            </div>
+        </nav>
+    </footer>
+</body>
+</html>
